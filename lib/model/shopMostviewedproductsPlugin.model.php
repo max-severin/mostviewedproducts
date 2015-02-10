@@ -15,9 +15,11 @@ class shopMostviewedproductsPluginModel extends waModel {
     		$fields = array(
 			    'product_id' => $product['id'],
 			);
+
 			$data = array(
 			    'view' => (int)$old_data['view'] + 1,
 			);
+			
 			$this->updateByField($fields, $data);
 
     	} else {
@@ -26,8 +28,9 @@ class shopMostviewedproductsPluginModel extends waModel {
 			    'product_id' => $product['id'],
 			    'view' => 1,
 			);
+
 			$this->insert($data, 1);
-			
+
     	}
 
     }
