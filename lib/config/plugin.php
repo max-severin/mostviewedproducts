@@ -5,8 +5,8 @@
  */
 
 return array(
-    'name' => ('Favorite products'),
-    'description' => ('Backend favorite products filtering'),
+    'name' => ('Самые просматриваемые товары'),
+    'description' => ('Плагин ведет учет просмотров товара и дает возможность выводить список самых популярных товаров'),
     'version'=>'1.0.0',
     'img'=>'img/mostviewedproducts.png',
     'handlers' => array(
