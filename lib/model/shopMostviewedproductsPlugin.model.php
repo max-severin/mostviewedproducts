@@ -4,13 +4,11 @@
  * Class shopMostviewedproductsPluginModel
  * @author Max Severin <makc.severin@gmail.com>
  */
-
 class shopMostviewedproductsPluginModel extends waModel {
 
     protected $table = 'shop_mvp_product_views';
 
     public function save($product) {
-
     	if ($old_data = $this->getByField('product_id', $product['id'])) {
 
     		$fields = array(
@@ -33,7 +31,6 @@ class shopMostviewedproductsPluginModel extends waModel {
 			$this->insert($data, 1);
 
     	}
-
     }
 
 }

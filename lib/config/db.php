@@ -3,7 +3,6 @@
 /*
  * @author Max Severin <makc.severin@gmail.com>
  */
-
 return array(
     'shop_mvp_product_views' => array(
         'product_id' => array('int', 11, 'null' => 0),
