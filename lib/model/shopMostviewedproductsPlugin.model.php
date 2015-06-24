@@ -6,10 +6,10 @@
  */
 class shopMostviewedproductsPluginModel extends waModel {
 
-    protected $table = 'shop_mvp_product_views';
+	protected $table = 'shop_mvp_product_views';
 
-    public function save($product) {
-    	if ($old_data = $this->getByField('product_id', $product['id'])) {
+	public function save($product) {
+		if ($old_data = $this->getByField('product_id', $product['id'])) {
 
 			$fields = array(
 				'product_id' => $product['id'],
@@ -21,7 +21,7 @@ class shopMostviewedproductsPluginModel extends waModel {
 			
 			$this->updateByField($fields, $data);
 
-    	} else {
+		} else {
 
 			$data = array(
 				'product_id' => $product['id'],
@@ -30,7 +30,7 @@ class shopMostviewedproductsPluginModel extends waModel {
 
 			$this->insert($data, 1);
 
-    	}
-    }
+		}
+	}
 
 }
