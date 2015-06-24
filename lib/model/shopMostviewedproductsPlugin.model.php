@@ -11,21 +11,21 @@ class shopMostviewedproductsPluginModel extends waModel {
     public function save($product) {
     	if ($old_data = $this->getByField('product_id', $product['id'])) {
 
-    		$fields = array(
-			    'product_id' => $product['id'],
+			$fields = array(
+				'product_id' => $product['id'],
 			);
 
 			$data = array(
-			    'view' => (int)$old_data['view'] + 1,
+				'view' => (int)$old_data['view'] + 1,
 			);
 			
 			$this->updateByField($fields, $data);
 
     	} else {
 
-    		$data = array(
-			    'product_id' => $product['id'],
-			    'view' => 1,
+			$data = array(
+				'product_id' => $product['id'],
+				'view' => 1,
 			);
 
 			$this->insert($data, 1);
